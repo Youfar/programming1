@@ -61,7 +61,7 @@ def smith_waterman(str1, str2):
 				pointer[i][j] = 2
 			if sub[i][j] == case1:
 				pointer[i][j] = 3
-			if sub[i][j] >= max_score:#dengyuhao
+			if sub[i][j] >= max_score:
 				max_score = sub[i][j]
 				max_i = i
 				max_j = j
