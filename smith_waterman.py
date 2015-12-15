@@ -1,17 +1,29 @@
 # Smith-Waterman algorithm 
 # optimal local alignment of two sequences 
-MATCH_AWARD = 1
-MISMATCH_PENALTY = -1
+from optparse import OptionParser
+import os
+
+usage = "usage: %prog [options] keyword"
+parser = OptionParser(usage)
+
+parser.add_option("-a", dest = "matchScore", type="int", default=1)
+parser.add_option("-b", dest = "mismatchScore", type="int", default=-1)
+(options, args) = parser.parse_args()
+
+matchAward = options.matchScore
+mismatchPenalty = options.mismatchScore
+#MATCH_AWARD = 1
+#MISMATCH_PENALTY = -1
 GAP_PENALTY = -2
 
 #decide match or gap
 def match_score(a, b):
 	if a == b:
-		return MATCH_AWARD
+		return matchAward
 	elif a == '-' or b == '-':
 		return GAP_PENALTY
 	else:
-		return MISMATCH_PENALTY
+		return mismatchPenalty
 		
 def smith_waterman(str1, str2):
 	"""
@@ -80,7 +92,16 @@ def smith_waterman(str1, str2):
 	return max_score, alignment1, alignment2
 
 def main():
+	
+	#usage = "usage: %prog [options] keyword"
+	#parser = OptionParser(usage)
 
+	#parser.add_option("-a", dest = "matchScore", type="int", default=1)
+	#parser.add_option("-b", dest = "mismatchScore", type="int", default=-1)
+	#(options, args) = parser.parse_args()
+
+	#matchAward = options.matchScore
+	#mismatchPenalty = options.mismatchScore
 	str1 = "GCCCTAGCG"
 	str2 = "GCGCAATG"
 
