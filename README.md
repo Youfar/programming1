@@ -17,6 +17,7 @@ python setup.py install
 
 # Option
 **-a**. match score of alignment. Default value is 1
+
 **-b**. mismatch score of alignment. Default value is -1
 
 
