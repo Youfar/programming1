@@ -1,3 +1,5 @@
+# This is Yuichi's pull request. Please ignire!
+
 # Smith-Waterman algorithm 
 # optimal local alignment of two sequences 
 from optparse import OptionParser
