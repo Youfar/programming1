@@ -1,6 +1,0 @@
-README
-setup.py
-smith.egg-info/PKG-INFO
-smith.egg-info/SOURCES.txt
-smith.egg-info/dependency_links.txt
-smith.egg-info/top_level.txt
