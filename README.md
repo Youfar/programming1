@@ -20,4 +20,7 @@ python setup.py install
 
 **-b**. mismatch score of alignment. Default value is -1
 
+# Travis CI status
+[![Build Status](https://travis-ci.org/Youfar/programming1.svg?branch=master)](https://travis-ci.org/Youfar/programming1)
+
 
